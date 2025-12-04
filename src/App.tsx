@@ -138,7 +138,7 @@ const App: React.FC = () => {
           <div className="container hero-inner">
             <div className="hero-content">
               <h1>
-                Аренда авто для такси <span className="accent">без депозита</span> и
+                Аренда АВТО под ТАКСИ <span className="accent">без депозита</span> и
                 вложений
               </h1>
               <p className="hero-subtitle">
@@ -174,8 +174,12 @@ const App: React.FC = () => {
                 <span className="hero-stat-value">от 24 часов</span>
               </div>
               <div className="hero-stat">
-                <span className="hero-stat-label">Поддержка</span>
-                <span className="hero-stat-value">24/7</span>
+                <span className="hero-stat-label">Средний доход</span>
+                <span className="hero-stat-value">от 300 000 ₸/мес</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-label">Опыт на рынке</span>
+                <span className="hero-stat-value">7 лет</span>
               </div>
             </div>
           </div>
@@ -199,12 +203,17 @@ const App: React.FC = () => {
               <div className="card utp-card animate-on-scroll fade-in-up">
                 <div className="icon-circle">✅</div>
                 <h3>Помощь с ИП и регистрацией</h3>
-                <p>Помогаем оформить ИП и подключаем к Яндекс.Такси без лишней бюрократии.</p>
+                <p>Оформление ИП за 15 минут и подключение к Яндекс.Такси без лишней бюрократии.</p>
               </div>
               <div className="card utp-card animate-on-scroll fade-in-up">
                 <div className="icon-circle">👥</div>
                 <h3>Акция «Приведи друга»</h3>
                 <p>Приводи водителя по рекомендации и получай скидку с аренды.</p>
+              </div>
+              <div className="card utp-card animate-on-scroll fade-in-up">
+                <div className="icon-circle">⏰</div>
+                <h3>Гибкий график работы</h3>
+                <p>Работай тогда, когда удобно — полный день, подработка или деление смены.</p>
               </div>
             </div>
           </div>
@@ -223,6 +232,14 @@ const App: React.FC = () => {
                   <span className="tariff-badge">Comfort</span>
                   <h3>Для стабильного заработка</h3>
                 </div>
+                <div className="tariff-cars">
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/hyundai-accent.jpg" alt="Hyundai Accent" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Hyundai Accent 2022</span>
+                  </div>
+                </div>
                 <ul className="tariff-list">
                   <li>Современные седаны на автомате</li>
                   <li>Расход топлива — оптимальный для работы в городе</li>
@@ -232,7 +249,7 @@ const App: React.FC = () => {
                 <div className="tariff-footer">
                   <div className="tariff-price">
                     <span className="label">от</span>
-                    <span className="value">XX XXX ₸ / день</span>
+                    <span className="value">13 000 ₸ / день</span>
                   </div>
                   <a
                     href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort"
@@ -245,10 +262,42 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <div className="card tariff-card tariff-card-featured animate-on-scroll scale-in">
+              <div className="card tariff-card animate-on-scroll scale-in">
                 <div className="tariff-header">
                   <span className="tariff-badge">Comfort+</span>
                   <h3>Больше заказов и дохода</h3>
+                </div>
+                <div className="tariff-cars">
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/elantra.jpg" alt="Hyundai Elantra" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Hyundai Elantra 2021–2024</span>
+                  </div>
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/byd-qin-plus.webp" alt="BYD Qin Plus" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">BYD Qin Plus 2023 (Electric)</span>
+                  </div>
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/tucson.webp" alt="Hyundai Tucson" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Hyundai Tucson 2022</span>
+                  </div>
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/byd-destroyer.png" alt="BYD Destroyer" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">BYD Destroyer</span>
+                  </div>
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/honchi.webp" alt="Honchi" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Honchi</span>
+                  </div>
                 </div>
                 <ul className="tariff-list">
                   <li>Новые авто с улучшенной комплектацией</li>
@@ -259,7 +308,7 @@ const App: React.FC = () => {
                 <div className="tariff-footer">
                   <div className="tariff-price">
                     <span className="label">от</span>
-                    <span className="value">YY YYY ₸ / день</span>
+                    <span className="value">15 000 ₸ / день</span>
                   </div>
                   <a
                     href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort%2B"
@@ -277,6 +326,20 @@ const App: React.FC = () => {
                   <span className="tariff-badge">Business</span>
                   <h3>Максимальный доход</h3>
                 </div>
+                <div className="tariff-cars">
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/sonata.jpg" alt="Hyundai Sonata" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Hyundai Sonata 2021–2023</span>
+                  </div>
+                  <div className="tariff-car-item">
+                    <div className="tariff-image-placeholder">
+                      <img src="/cars/honchi-business.jpg" alt="Honchi" className="tariff-image" />
+                    </div>
+                    <span className="tariff-car-name">Honchi</span>
+                  </div>
+                </div>
                 <ul className="tariff-list">
                   <li>Бизнес-седаны и кроссоверы</li>
                   <li>Высокий средний чек и чаевые</li>
@@ -286,7 +349,7 @@ const App: React.FC = () => {
                 <div className="tariff-footer">
                   <div className="tariff-price">
                     <span className="label">от</span>
-                    <span className="value">ZZ ZZZ ₸ / день</span>
+                    <span className="value">18 000 ₸ / день</span>
                   </div>
                   <a
                     href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Business"
@@ -437,6 +500,12 @@ const App: React.FC = () => {
                 </p>
               </details>
               <details className="faq-item animate-on-scroll fade-in-up">
+                <summary>Какие требования к водителю?</summary>
+                <p>
+                  Возраст от 24 лет, класс страховки от 6 и выше, водительское удостоверение и 2 залоговых документа.
+                </p>
+              </details>
+              <details className="faq-item animate-on-scroll fade-in-up">
                 <summary>Есть ли депозит?</summary>
                 <p>Нет, мы работаем без депозита и без первоначального взноса.</p>
               </details>
@@ -463,8 +532,8 @@ const App: React.FC = () => {
         <section className="section section-cta" id="contacts">
           <div className="container section-cta-inner">
             <div className="section-cta-text animate-on-scroll fade-in-left">
-              <h2>Готов начать зарабатывать на аренде авто?</h2>
-              <p>Оставь заявку — перезвоним, расскажем условия и подберём авто под тебя.</p>
+              <h2>Готов начать зарабатывать уже сегодня?</h2>
+              <p>Пора превратить арендную машину в источник дохода!</p>
               <div className="cta-contacts">
                 <a href="tel:+77000000000">+7 700 000 00 00</a>
                 <span>WhatsApp / звонок, 24/7</span>
