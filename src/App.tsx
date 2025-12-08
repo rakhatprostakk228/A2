@@ -89,7 +89,7 @@ const App: React.FC = () => {
             <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
             <div className="mobile-menu-cta">
               <a
-                href="https://wa.me/77000000000"
+                href="https://wa.me/+77003608822"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary btn-full"
@@ -98,7 +98,7 @@ const App: React.FC = () => {
                 WhatsApp
               </a>
               <a
-                href="tel:+77000000000"
+                href="tel:+77003608822"
                 className="btn btn-outline btn-full"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -107,11 +107,11 @@ const App: React.FC = () => {
             </div>
           </nav>
           <div className="header-cta">
-            <a href="tel:+77000000000" className="btn btn-outline">
+            <a href="tel:+77003608822" className="btn btn-outline">
               Позвонить
             </a>
             <a
-              href="https://wa.me/77000000000"
+              href="https://wa.me/+77003608822"
               target="_blank"
               rel="noreferrer"
               className="btn btn-primary"
@@ -147,7 +147,7 @@ const App: React.FC = () => {
               </p>
               <div className="hero-actions">
                 <a
-                  href="https://wa.me/77000000000"
+                  href="https://wa.me/+77003608822"
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-primary btn-lg"
@@ -252,7 +252,7 @@ const App: React.FC = () => {
                     <span className="value">13 000 ₸ / день</span>
                   </div>
                   <a
-                    href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort"
+                    href="https://wa.me/+77003608822?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort"
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-primary btn-full"
@@ -311,7 +311,7 @@ const App: React.FC = () => {
                     <span className="value">15 000 ₸ / день</span>
                   </div>
                   <a
-                    href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort%2B"
+                    href="https://wa.me/+77003608822?text=Хочу%20арендовать%20авто%20в%20тарифе%20Comfort%2B"
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-primary btn-full"
@@ -352,7 +352,7 @@ const App: React.FC = () => {
                     <span className="value">18 000 ₸ / день</span>
                   </div>
                   <a
-                    href="https://wa.me/77000000000?text=Хочу%20арендовать%20авто%20в%20тарифе%20Business"
+                    href="https://wa.me/+77003608822?text=Хочу%20арендовать%20авто%20в%20тарифе%20Business"
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-primary btn-full"
@@ -412,7 +412,7 @@ const App: React.FC = () => {
                     const encoded = encodeURIComponent(
                       `Хочу подобрать авто в аренду. Мой контакт: ${contact}`,
                     )
-                    window.open(`https://wa.me/77000000000?text=${encoded}`, '_blank')
+                    window.open(`https://wa.me/+77003608822?text=${encoded}`, '_blank')
                   }}
                 >
                   <input
@@ -524,6 +524,10 @@ const App: React.FC = () => {
                 <summary>Есть ли поддержка 24/7?</summary>
                 <p>Да, служба поддержки для водителей работает круглосуточно.</p>
               </details>
+              <details className="faq-item animate-on-scroll fade-in-up">
+                <summary>Есть ли выезд в межгород?</summary>
+                <p>Нет, мы не предоставляем услуги выезда в межгород.</p>
+              </details>
             </div>
           </div>
         </section>
@@ -535,19 +539,19 @@ const App: React.FC = () => {
               <h2>Готов начать зарабатывать уже сегодня?</h2>
               <p>Пора превратить арендную машину в источник дохода!</p>
               <div className="cta-contacts">
-                <a href="tel:+77000000000">+7 700 000 00 00</a>
+                <a href="tel:+77003608822">+7 700 360 88 22</a>
                 <span>WhatsApp / звонок, 24/7</span>
               </div>
               <div className="cta-buttons">
                 <a
-                  href="https://wa.me/77000000000"
+                  href="https://wa.me/+77003608822"
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-primary btn-lg"
                 >
                   Написать в WhatsApp
                 </a>
-                <a href="tel:+77000000000" className="btn btn-outline">
+                <a href="tel:+77003608822" className="btn btn-outline">
                   Позвонить сейчас
                 </a>
               </div>
@@ -564,7 +568,7 @@ const App: React.FC = () => {
                 const encoded = encodeURIComponent(
                   `Заявка с сайта A2.\nИмя: ${name}\nТелефон: ${phone}\nТариф: ${tariff}`,
                 )
-                window.open(`https://wa.me/77000000000?text=${encoded}`, '_blank')
+                window.open(`https://wa.me/+77003608822?text=${encoded}`, '_blank')
               }}
             >
               <h3>Оставить заявку</h3>
