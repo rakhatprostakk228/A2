@@ -3,6 +3,60 @@ import './style.css'
 
 const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [phone, setPhone] = useState('')
+
+  // Функция форматирования телефона: +7 (XXX) - XXX - XX - XX
+  const formatPhone = (value: string): string => {
+    // Удаляем все нецифровые символы
+    let digits = value.replace(/\D/g, '')
+    
+    // Если начинается с 7 или 8, убираем первую цифру (будет добавлен +7)
+    if (digits.startsWith('7')) {
+      digits = digits.substring(1)
+    } else if (digits.startsWith('8')) {
+      digits = digits.substring(1)
+    }
+    
+    // Ограничиваем до 10 цифр
+    const limitedDigits = digits.substring(0, 10)
+    
+    // Форматируем: +7 (XXX) - XXX - XX - XX
+    if (limitedDigits.length === 0) {
+      return '+7'
+    } else if (limitedDigits.length <= 3) {
+      return `+7 (${limitedDigits}`
+    } else if (limitedDigits.length <= 6) {
+      return `+7 (${limitedDigits.substring(0, 3)}) - ${limitedDigits.substring(3)}`
+    } else if (limitedDigits.length <= 8) {
+      return `+7 (${limitedDigits.substring(0, 3)}) - ${limitedDigits.substring(3, 6)} - ${limitedDigits.substring(6)}`
+    } else {
+      return `+7 (${limitedDigits.substring(0, 3)}) - ${limitedDigits.substring(3, 6)} - ${limitedDigits.substring(6, 8)} - ${limitedDigits.substring(8)}`
+    }
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    // Если пользователь пытается удалить +7, не позволяем
+    if (value.length < 2) {
+      setPhone('+7')
+      return
+    }
+    setPhone(formatPhone(value))
+  }
+
+  const handlePhoneKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Разрешаем удаление, но не позволяем удалить +7
+    if (e.key === 'Backspace' && phone.length <= 2) {
+      e.preventDefault()
+    }
+  }
+
+  const handlePhoneFocus = () => {
+    // Если поле пустое, устанавливаем +7
+    if (!phone || phone.length < 2) {
+      setPhone('+7')
+    }
+  }
 
   useEffect(() => {
     // Блокировка скролла при открытом меню
@@ -69,18 +123,18 @@ const App: React.FC = () => {
 
   return (
     <div className="page">
+      {mobileMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
       <header className="header">
         <div className="container header-inner">
           <div className="logo">
             <img src="/logo.jpg" alt="A2" className="logo-image" />
             <span className="logo-text">Авто в аренду для такси</span>
           </div>
-          {mobileMenuOpen && (
-            <div
-              className="mobile-menu-overlay"
-              onClick={() => setMobileMenuOpen(false)}
-            />
-          )}
           <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
             <a href="#tariffs" onClick={() => setMobileMenuOpen(false)}>Тарифы</a>
             <a href="#fleet" onClick={() => setMobileMenuOpen(false)}>Авто</a>
@@ -563,12 +617,22 @@ const App: React.FC = () => {
                 const target = e.target as HTMLFormElement
                 const formData = new FormData(target)
                 const name = (formData.get('name') as string) || ''
-                const phone = (formData.get('phone') as string) || ''
+                // Извлекаем только цифры из форматированного телефона
+                const phoneDigits = phone.replace(/\D/g, '').replace(/^7/, '')
+                // Проверяем, что есть 10 цифр
+                if (phoneDigits.length !== 10) {
+                  alert('Пожалуйста, введите полный номер телефона (10 цифр)')
+                  return
+                }
+                const formattedPhone = `+7${phoneDigits}`
                 const tariff = (formData.get('tariff') as string) || ''
                 const encoded = encodeURIComponent(
-                  `Заявка с сайта A2.\nИмя: ${name}\nТелефон: ${phone}\nТариф: ${tariff}`,
+                  `Заявка с сайта A2.\nИмя: ${name}\nТелефон: ${formattedPhone}\nТариф: ${tariff}`,
                 )
                 window.open(`https://wa.me/+77003608822?text=${encoded}`, '_blank')
+                // Сбрасываем форму после отправки
+                setPhone('')
+                target.reset()
               }}
             >
               <h3>Оставить заявку</h3>
@@ -581,7 +645,11 @@ const App: React.FC = () => {
                 <input
                   name="phone"
                   type="tel"
-                  placeholder="+7 ___ ___ __ __"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  onKeyDown={handlePhoneKeyDown}
+                  onFocus={handlePhoneFocus}
+                  placeholder="+7 (777) - 777 - 77 - 77"
                   required
                 />
               </label>
