@@ -289,7 +289,7 @@ const App: React.FC = () => {
                 <div className="tariff-cars">
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/hyundai-accent.jpg" alt="Hyundai Accent" className="tariff-image" />
+                      <img src="/cars/hyundai accent 2022.png" alt="Hyundai Accent" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">Hyundai Accent 2022</span>
                   </div>
@@ -324,33 +324,27 @@ const App: React.FC = () => {
                 <div className="tariff-cars">
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/elantra.jpg" alt="Hyundai Elantra" className="tariff-image" />
+                      <img src="/cars/hyundai elantra 2021–2024.png" alt="Hyundai Elantra" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">Hyundai Elantra 2021–2024</span>
                   </div>
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/byd-qin-plus.webp" alt="BYD Qin Plus" className="tariff-image" />
+                      <img src="/cars/byd qin plus.png" alt="BYD Qin Plus" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">BYD Qin Plus 2023 (Electric)</span>
                   </div>
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/tucson.webp" alt="Hyundai Tucson" className="tariff-image" />
+                      <img src="/cars/hyundai tucson.png" alt="Hyundai Tucson" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">Hyundai Tucson 2022</span>
                   </div>
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/byd-destroyer.png" alt="BYD Destroyer" className="tariff-image" />
+                      <img src="/cars/byd destroyer.png" alt="BYD Destroyer" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">BYD Destroyer</span>
-                  </div>
-                  <div className="tariff-car-item">
-                    <div className="tariff-image-placeholder">
-                      <img src="/cars/honchi.webp" alt="Honchi" className="tariff-image" />
-                    </div>
-                    <span className="tariff-car-name">Honchi</span>
                   </div>
                 </div>
                 <ul className="tariff-list">
@@ -383,15 +377,15 @@ const App: React.FC = () => {
                 <div className="tariff-cars">
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/sonata.jpg" alt="Hyundai Sonata" className="tariff-image" />
+                      <img src="/cars/hyundai sonata .png" alt="Hyundai Sonata" className="tariff-image" />
                     </div>
                     <span className="tariff-car-name">Hyundai Sonata 2021–2023</span>
                   </div>
                   <div className="tariff-car-item">
                     <div className="tariff-image-placeholder">
-                      <img src="/cars/honchi-business.jpg" alt="Honchi" className="tariff-image" />
+                      <img src="/cars/byd destroyer.png" alt="BYD Destroyer" className="tariff-image" />
                     </div>
-                    <span className="tariff-car-name">Honchi</span>
+                    <span className="tariff-car-name">BYD Destroyer</span>
                   </div>
                 </div>
                 <ul className="tariff-list">
